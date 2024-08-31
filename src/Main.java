@@ -24,6 +24,19 @@ public class Main {
         }
     }
 
+    public static int distanceTime(int km) {
+        if (km <= 20) {
+            return 1;
+        } else if (km > 20 && km < 60) {
+            return 2;
+        } else if (km >= 60 && km < 100) {
+            return 3;
+        } else {
+            return 0;
+        }
+    }
+
+
     public static void main(String[] args) {
         System.out.println("Задача 1");
         int year = 2105;
@@ -34,8 +47,18 @@ public class Main {
         byte clientOs = 1;
         printClientOsDeviceYear(clientOs, clientDeviceYear);
 
-
+        System.out.println("Задача 3");
+        int deliveryDistance = 95;
+        int days = distanceTime(deliveryDistance);
+        if (days > 0) {
+            System.out.println("Потребуется дней: " + days);
+        } else {
+            System.out.println("Доставки нет.");
+        }
     }
 
+
 }
+
+
 
